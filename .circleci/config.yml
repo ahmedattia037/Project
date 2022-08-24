@@ -145,7 +145,6 @@ jobs:
       - image: circleci/python:3.7-alpine3.11
     steps:
       - checkout
-      - install_ansible
       - add_ssh_keys:
           fingerprints: ["0e:9a:e0:c0:d0:b4:1b:e5:ab:11:7e:aa:86:b4:a9:0e"]
       - attach_workspace:
