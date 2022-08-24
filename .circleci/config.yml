@@ -130,10 +130,9 @@ jobs:
           name: Add back-end ip to ansible inventory
           command: |
             aws ec2 describe-instances \
-            --filters "Name=tag:Name,Values=backend-${CIRCLE_WORKFLOW_ID:0:7}" \
-            --query 'Reservations[*].Instances[*].PublicIpAddress' \
-            --output text >> .circleci/ansible/inventory.txt
-            cat .circleci/ansible/inventory.txt
+              --query 'Reservations[*].Instances[*].PublicIpAddress' \
+              --output text >> .circleci/ansible/inventory.txt
+              cat .circleci/ansible/inventory.txt
       - persist_to_workspace:
           root: .
           paths:
@@ -143,9 +142,10 @@ jobs:
           when: on_fail      
   configure-infrastructure:
     docker:
-      - image: python:3.7-alpine3.11
+      - image: circleci/python:3.7-alpine3.11
     steps:
       - checkout
+      - install_ansible
       - add_ssh_keys:
           fingerprints: ["0e:9a:e0:c0:d0:b4:1b:e5:ab:11:7e:aa:86:b4:a9:0e"]
       - attach_workspace:
