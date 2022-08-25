@@ -366,7 +366,7 @@ jobs:
                    --no-paginate --output text)
             echo OldWorkflowID: "${OldWorkflowID}"
             echo CIRCLE_WORKFLOW_ID "${CIRCLE_WORKFLOW_ID:0:7}"
-            curl -k https://kvdb.io/4SL5Rn9AKifoPwzh7Si1dh/oldid_${CIRCLE_WORKFLOW_ID:0:7} -d ${OldWorkflowID}
+            curl -k https://kvdb.io/6dNGfvda7Z12sdybbK89sn/oldid_${CIRCLE_WORKFLOW_ID:0:7} -d ${OldWorkflowID}
               aws cloudformation deploy \
                --template-file .circleci/files/cloudfront.yml \
                --tags project=udapeople \
