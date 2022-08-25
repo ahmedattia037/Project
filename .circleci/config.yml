@@ -383,7 +383,7 @@ jobs:
           name: Fetch the Old workflow ID
           command: |
            export OldWorkflowID=$(curl --insecure https://kvdb.io/6dNGfvda7Z12sdybbK89sn/oldid_${CIRCLE_WORKFLOW_ID:0:7})            
-            echo "Found Old Stack ID : ${OldWorkflowID}"
+            echo OldWorkflowID : "${OldWorkflowID}"
 
             if [[ "${CIRCLE_WORKFLOW_ID:0:7}" != "${OldWorkflowID}" ]]
             then
