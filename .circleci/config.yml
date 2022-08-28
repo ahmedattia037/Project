@@ -416,7 +416,7 @@ jobs:
 workflows:
   default:
     jobs:
-     # - initial-stack
+      - initial-stack
       - build-frontend
       - build-backend
       - test-frontend:
