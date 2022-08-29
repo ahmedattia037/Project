@@ -1,3 +1,3 @@
-https://github.com/ahmedattia037/Project/tree/circleci-project-setup  [URL01]
+https://github.com/ahmedattia037  [URL01]
 
-http://udapeople-18c6955.s3-website-us-east-1.amazonaws.com/  [URL02]
+http://udapeople-179390f.s3-website-us-east-1.amazonaws.com  [URL02]
